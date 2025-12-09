@@ -1,0 +1,28 @@
+.full-screen {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f9f6f1; /* optional */
+    display: flex;
+    flex-direction: column;
+}
+
+.full-screen header{
+    width: 100%;
+    height: 10%;
+    margin: 0;           /* remove margins */
+    padding: 20px;       /* reasonable padding */
+    background: #4a2c19;    /* example background */
+}
+
+.main{
+    background: #FFFFFF;
+
+}
+
+.full-screen footer{
+    width: 100%;
+    height: 10%;
+    margin: 0;           /* remove margins */
+    padding: 20px;       /* reasonable padding */
+    background: #D4af37;    /* example background */
+}
