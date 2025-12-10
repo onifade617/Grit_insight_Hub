@@ -1,7 +1,50 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
-    <header>
-        <h1>Welcome to Grit Insight Hub</h1>
-    </header>
+<main class="main">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h2>Welcome to Grit Insight Hub</h2>
+        <p class="hero-tagline">Driving Social Impact Through Digital Solutions</p>
+        <a href="#services" class="link hero-cta">Explore Our Solutions</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h3>Our Services</h3>
+        <div class="services-container">
+            <div class="service-card">
+                <h4>Digital Solutions</h4>
+                <p>We design custom digital solutions to help organizations streamline operations and improve social impact.</p>
+            </div>
+            <div class="service-card">
+                <h4>Consulting & Insights</h4>
+                <p>Our experts provide actionable insights to solve complex social problems using data-driven approaches.</p>
+            </div>
+            <div class="service-card">
+                <h4>Training & Capacity Building</h4>
+                <p>We empower organizations with knowledge and skills to leverage digital tools effectively.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <h3>What Our Partners Say</h3>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <p>"Grit Insight Hub helped us digitize our processes, saving time and resources. Truly transformative!"</p>
+                <strong>- Bello Omotola, NGO Partner</strong>
+            </div>
+            <div class="testimonial-card">
+                <p>"Their insights and solutions addressed social challenges in ways we never imagined."</p>
+                <strong>- Adeiza Ja'far, Social Enterprise</strong>
+            </div>
+        </div>
+    </section>
+
+</main>
+
 {% endblock content %}

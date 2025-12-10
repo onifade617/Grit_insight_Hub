@@ -1,12 +1,44 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            About Page
-        </title>
-    </head>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<main>
 
-    <body>
-        <h1>This is about Grit Insight Hub</h1>
-    </body>
-</html>
+    <!-- About Hero Section -->
+    <section class="hero-section">
+        <h2 style="font: 70px;">About us</h2>
+        
+    </section>
+
+    <!-- About Details Section -->
+    <section class="about-section" style="padding:40px 20px; background: var(--background);">
+        <h3 style="color: var(--header-brown); margin-bottom: 20px; text-align: center;">Who We Are</h3>
+        <p style="color:#333; line-height:1.6; max-width:800px; margin:auto;">
+            Grit Insight Hub Ltd is a pioneering organization dedicated to transforming social challenges into sustainable opportunities through innovative digital solutions. 
+            We empower communities and organizations to optimize operations, enhance impact, and foster growth using smart strategies and technology.
+        </p>
+
+        <h3 style="color: var(--header-brown); margin:40px 0 20px 0; text-align: center;">Our Mission</h3>
+        <p style="color:#333; line-height:1.6; max-width:800px; margin:auto;">
+            To drive positive social change by delivering digital solutions that make operations smarter, efficient, and impactful.
+        </p>
+
+        <h3 style="color: var(--header-brown); margin:40px 0 20px 0; text-align: center;">Our Vision</h3>
+        <p style="color:#333; line-height:1.6; max-width:800px; margin:auto;">
+            To be the leading enabler of digital transformation for organizations addressing social problems, unlocking innovation, and creating meaningful impact.
+        </p>
+
+        
+        <h3 style="color: var(--header-brown); margin:40px 0 20px 0; text-align: center;">Core Values</h3>
+        <ul style="max-width:800px; margin:auto; padding-left: 20px; color:#333; line-height:1.6;">
+            <li>Persistence: Consistently pushing forward despite challenges and obstacles.</li>
+            <li>Resilience: Bouncing back stronger from setbacks and learning from experiences.</li>
+            <li>Ingenuity: Applying creativity and resourcefulness to solve problems effectively.</li>
+            <li>Courage: Taking bold and principled actions to drive impact.</li>
+            <li>Adaptation: Adjusting strategies and approaches to thrive in changing environments.</li>
+        </ul>
+
+
+    </section>
+
+</main>
+{% endblock content %}

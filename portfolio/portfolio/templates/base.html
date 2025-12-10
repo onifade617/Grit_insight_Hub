@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html>
+    {% load static %}
     <head>
         <title>{{ template_data.title }}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
         <meta name="viewport" content="width=device-width,initial-scale=1" />
 
     </head>
 
 
     <body>
-        <!--Header-->
-        <!--Header-->
+        
 
-        <div class="full screen">
+        <div class="full-screen">
+            <!--Header-->
+            <header>
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" alt="Grit Insight Hub Logo" class="logo-img">
+                    <h1>Grit Insight Hub</h1>
+                    <p class="tagline">Driving Social Impact Through Digital Solutions</p>
+                </div>
+
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="{% url 'home.index' %}">Home</a></li>
+                        <li><a href="{% url 'home.about' %}">About Us</a></li>
+                        <li><a href="{% url 'home.products' %}">Products</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <!--Header-->
             {% block content %}
 
             {% endblock content %}
 
+
+            <!--Footer-->
+
+            <footer>
+                <div class="footer-container">
+
+                    <!-- Column 1 -->
+                    <div class="footer-section">
+                        <h3>Grit Insight Hub Ltd</h3>
+                        <p>Digital solutions for social impact.</p>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="footer-section">
+                        <h4>Links</h4>
+                        <ul>
+                            <li><a href="{% url 'home.about' %}">About</a></li>
+                            <li><a href="{% url 'home.products' %}">Products</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <p>Email: gritInsighthub03@gmail.com</p>
+                        <p>Phone: +234 816 792 6775</p>
+
+                        <div class="social-icons">
+                            <a href="https://x.com/HubGrit78747"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/gritinsight-hub-2892402b4/"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; <span id="year"></span> Grit Insight Hub Ltd</p>
+                </div>
+            </footer>
+
+            <script>
+                // Auto-insert current year
+                document.getElementById("year").textContent = new Date().getFullYear();
+            </script>
+
+
+            <!--Footer-->
+
         </div>
 
-        <!--Footer-->
-        <!--Footer-->
+        
 
 
     </body>

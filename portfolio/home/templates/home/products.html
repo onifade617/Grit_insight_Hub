@@ -1,12 +1,34 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Products page
-        </title>
-    </head>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<main class="products-section">
 
-    <body>
-        <h1>These are our list of products at Grit Insight Hub</h1>
-    </body>
-</html>
+    <h1 style="text-align:center; color:var(--header-brown); margin-bottom:40px;">
+        Our Products & Projects
+    </h1>
+
+    <div class="products-container">
+        <!-- Example Product Card -->
+        <div class="product-card">
+            <h4>Project Alpha</h4>
+            <p>Digital solution for community engagement and data-driven decision making.</p>
+            <a href="#" class="link">Learn More</a>
+        </div>
+
+        <div class="product-card">
+            <h4>Project Beta</h4>
+            <p>Analytics platform designed to measure social impact efficiently.</p>
+            <a href="#" class="link">Learn More</a>
+        </div>
+
+        <div class="product-card">
+            <h4>Project Gamma</h4>
+            <p>Innovative tool to support NGOs in monitoring and evaluation activities.</p>
+            <a href="#" class="link">Learn More</a>
+        </div>
+
+        <!-- Add more product cards as needed -->
+    </div>
+
+</main>
+{% endblock content %}
