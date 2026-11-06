@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 import os
+import warnings
+
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,13 +23,48 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
+def env_list(name, default=''):
+    return [item.strip() for item in os.environ.get(name, default).split(',') if item.strip()]
+
+
+# Running on a cloud host? Each platform sets one of these automatically.
+ON_CLOUD = any(os.environ.get(var) for var in ('VERCEL', 'RENDER', 'RAILWAY_ENVIRONMENT', 'DYNO'))
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$_9m*93betxl+mzv9-1yj&fy53p1&=ch-asa1_hn&ku+z1!v!z'
+# Set DJANGO_SECRET_KEY on your host; the fallback is only for local development.
+SECRET_KEY = os.environ.get(
+    'DJANGO_SECRET_KEY',
+    'django-insecure-$_9m*93betxl+mzv9-1yj&fy53p1&=ch-asa1_hn&ku+z1!v!z',
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Off automatically on cloud hosts; override with DJANGO_DEBUG=True/False.
+DEBUG = os.environ.get('DJANGO_DEBUG', str(not ON_CLOUD)).lower() in ('1', 'true', 'yes')
 
-ALLOWED_HOSTS = []
+# Default free-host domains, plus anything extra (e.g. a custom domain) in DJANGO_ALLOWED_HOSTS.
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '.vercel.app',
+    '.onrender.com',
+    '.up.railway.app',
+    '.pythonanywhere.com',
+    '.koyeb.app',
+] + env_list('DJANGO_ALLOWED_HOSTS')
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.vercel.app',
+    'https://*.onrender.com',
+    'https://*.up.railway.app',
+    'https://*.pythonanywhere.com',
+    'https://*.koyeb.app',
+] + env_list('DJANGO_CSRF_TRUSTED_ORIGINS')
+
+if not DEBUG:
+    # Cloud hosts terminate HTTPS at a proxy in front of Django.
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 
 # Application definition
@@ -43,6 +81,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -76,11 +115,14 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+# SQLite by default. Set DATABASE_URL (e.g. a free Neon/Supabase/Render Postgres)
+# when you need persistent data in production - serverless hosts like Vercel
+# have a read-only, temporary filesystem, so SQLite writes won't persist there.
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+        conn_max_age=600,
+    )
 }
 
 
@@ -122,3 +164,17 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'portfolio/static/',
 ]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# WhiteNoise serves static files straight from Django in production.
+STORAGES = {
+    'default': {'BACKEND': 'django.core.files.storage.FileSystemStorage'},
+    'staticfiles': {'BACKEND': 'whitenoise.storage.CompressedStaticFilesStorage'},
+}
+# Serve directly from the app/static folders too, so hosts that don't run
+# `collectstatic` during the build (e.g. Vercel) still get CSS and images.
+WHITENOISE_USE_FINDERS = True
+# ...and don't warn that STATIC_ROOT is missing when collectstatic wasn't run.
+warnings.filterwarnings('ignore', message='No directory at')
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

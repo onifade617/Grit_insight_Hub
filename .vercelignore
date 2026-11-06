@@ -1,0 +1,6 @@
+myenv/
+.venv/
+*.pdf
+extract_pdfs.py
+**/__pycache__/
+portfolio/staticfiles/

@@ -1,0 +1,19 @@
+# Virtual environments
+myenv/
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Django
+portfolio/staticfiles/
+*.log
+
+# Secrets
+.env
+
+# Deployment tooling
+.vercel/
