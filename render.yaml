@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: grit-insight-hub
+    runtime: python
+    plan: free
+    buildCommand: ./build.sh
+    startCommand: gunicorn --chdir portfolio portfolio.wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: DJANGO_SECRET_KEY
+        generateValue: true

@@ -1,44 +1,121 @@
 {% extends 'base.html' %}
 {% block content %}
-{% load static %}
-<main>
 
-    <!-- About Hero Section -->
-    <section class="hero-section">
-        <h2 style="font: 70px;">About us</h2>
-        
-    </section>
-
-    <!-- About Details Section -->
-    <section class="about-section" style="padding:40px 20px; background: var(--background);">
-        <h3 style="color: var(--header-brown); margin-bottom: 20px; text-align: center;">Who We Are</h3>
-        <p style="color:#333; line-height:1.6; max-width:800px; margin:auto;">
-            Grit Insight Hub Ltd is a pioneering organization dedicated to transforming social challenges into sustainable opportunities through innovative digital solutions. 
-            We empower communities and organizations to optimize operations, enhance impact, and foster growth using smart strategies and technology.
+<!-- Page header -->
+<section class="page-header" aria-labelledby="about-title">
+    <div class="container page-header__inner">
+        <p class="overline">About us</p>
+        <h1 class="display-medium" id="about-title">Building a smarter, more resilient future</h1>
+        <p class="body-large page-header__lead">
+            GRITINSIGHTHUB LTD drives social impact through digital solutions. We equip businesses,
+            institutions and communities with the tools they need to thrive in the digital age.
         </p>
+    </div>
+</section>
 
-        <h3 style="color: var(--header-brown); margin:40px 0 20px 0; text-align: center;">Our Mission</h3>
-        <p style="color:#333; line-height:1.6; max-width:800px; margin:auto;">
-            To drive positive social change by delivering digital solutions that make operations smarter, efficient, and impactful.
-        </p>
+<!-- Vision & mission -->
+<section class="section section--tight" aria-label="Vision and mission">
+    <div class="container card-grid card-grid--2">
+        <article class="card card--tonal purpose" data-reveal>
+            <span class="icon-tile icon-tile--on-tonal"><span class="material-symbols-rounded" aria-hidden="true">visibility</span></span>
+            <p class="overline">Our vision</p>
+            <h2 class="headline-small">
+                To be a leading force in leveraging innovative digital solutions to address social
+                challenges, creating smarter, more sustainable, and meaningful impact for communities and
+                society at large.
+            </h2>
+        </article>
+        <article class="card card--tonal-tertiary purpose" data-reveal>
+            <span class="icon-tile icon-tile--on-tonal"><span class="material-symbols-rounded" aria-hidden="true">rocket_launch</span></span>
+            <p class="overline">Our mission</p>
+            <h2 class="headline-small">
+                To deliver tangible value to society by equipping businesses with the digital tools they
+                need to thrive.
+            </h2>
+            <p class="body-large">
+                By streamlining workflows, enhancing decision-making processes, and creating smarter
+                products, we help MSMEs stay competitive and agile in today's rapidly evolving market
+                landscape.
+            </p>
+        </article>
+    </div>
+</section>
 
-        <h3 style="color: var(--header-brown); margin:40px 0 20px 0; text-align: center;">Our Vision</h3>
-        <p style="color:#333; line-height:1.6; max-width:800px; margin:auto;">
-            To be the leading enabler of digital transformation for organizations addressing social problems, unlocking innovation, and creating meaningful impact.
-        </p>
+<!-- Our story -->
+<section class="section section--surface" aria-labelledby="why-title">
+    <div class="container split">
+        <div data-reveal>
+            <p class="overline">What drives us</p>
+            <h2 class="headline-large" id="why-title">Innovation, empowerment and partnership</h2>
+        </div>
+        <div class="split__body" data-reveal>
+            <p class="body-large">
+                Through strategic partnerships and collaborations, GRITINSIGHTHUB LTD is poised to drive
+                meaningful change and contribute to the growth and sustainability of MSMEs globally. We are
+                committed to driving innovation, fostering economic empowerment, and shaping the future of
+                business through digital transformation.
+            </p>
+            <p class="body-large">
+                Our work spans health, education, logistics, agri-food and public services: from Lafiya AI, a
+                voice-first health platform in five Nigerian languages, to Seedbed, a portal for low-fee
+                schools, and Smart-PODSS, a decision-support system for port operations.
+            </p>
+            <ul class="check-list">
+                <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Data engineering and applied AI depth</li>
+                <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Experience across health, education, logistics and agriculture</li>
+                <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Quality-assurance discipline in every release</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-        
-        <h3 style="color: var(--header-brown); margin:40px 0 20px 0; text-align: center;">Core Values</h3>
-        <ul style="max-width:800px; margin:auto; padding-left: 20px; color:#333; line-height:1.6;">
-            <li>Persistence: Consistently pushing forward despite challenges and obstacles.</li>
-            <li>Resilience: Bouncing back stronger from setbacks and learning from experiences.</li>
-            <li>Ingenuity: Applying creativity and resourcefulness to solve problems effectively.</li>
-            <li>Courage: Taking bold and principled actions to drive impact.</li>
-            <li>Adaptation: Adjusting strategies and approaches to thrive in changing environments.</li>
-        </ul>
+<!-- Values -->
+<section class="section" aria-labelledby="values-title">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <p class="overline">Our values</p>
+            <h2 class="headline-large" id="values-title">The grit behind the insight</h2>
+        </div>
+        <div class="card-grid card-grid--values">
+            <article class="card card--outlined value" data-reveal>
+                <span class="icon-tile"><span class="material-symbols-rounded" aria-hidden="true">hiking</span></span>
+                <h3 class="title-large">Persistence</h3>
+                <p class="body-medium">Consistently pushing forward despite challenges and obstacles.</p>
+            </article>
+            <article class="card card--outlined value" data-reveal>
+                <span class="icon-tile icon-tile--tertiary"><span class="material-symbols-rounded" aria-hidden="true">restart_alt</span></span>
+                <h3 class="title-large">Resilience</h3>
+                <p class="body-medium">Bouncing back stronger from setbacks and learning from every experience.</p>
+            </article>
+            <article class="card card--outlined value" data-reveal>
+                <span class="icon-tile icon-tile--secondary"><span class="material-symbols-rounded" aria-hidden="true">lightbulb</span></span>
+                <h3 class="title-large">Ingenuity</h3>
+                <p class="body-medium">Applying creativity and resourcefulness to solve problems effectively.</p>
+            </article>
+            <article class="card card--outlined value" data-reveal>
+                <span class="icon-tile"><span class="material-symbols-rounded" aria-hidden="true">shield</span></span>
+                <h3 class="title-large">Courage</h3>
+                <p class="body-medium">Taking bold, principled action to drive real impact.</p>
+            </article>
+            <article class="card card--outlined value" data-reveal>
+                <span class="icon-tile icon-tile--tertiary"><span class="material-symbols-rounded" aria-hidden="true">psychiatry</span></span>
+                <h3 class="title-large">Adaptation</h3>
+                <p class="body-medium">Adjusting strategies and approaches to thrive in changing environments.</p>
+            </article>
+        </div>
+    </div>
+</section>
 
+<!-- Join us -->
+<section class="section section--tight" aria-label="Join us">
+    <div class="container">
+        <blockquote class="pull-quote" data-reveal>
+            <p class="headline-medium">
+                Join us on our journey to transform the way MSMEs operate and thrive in the digital age.
+                Together, we can build a smarter, more resilient future for businesses worldwide.
+            </p>
+        </blockquote>
+    </div>
+</section>
 
-    </section>
-
-</main>
 {% endblock content %}
