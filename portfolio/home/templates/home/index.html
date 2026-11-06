@@ -1,50 +1,215 @@
 {% extends 'base.html' %}
 {% block content %}
-{% load static %}
 
-<main class="main">
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <h2>Welcome to Grit Insight Hub</h2>
-        <p class="hero-tagline">Driving Social Impact Through Digital Solutions</p>
-        <a href="#services" class="link hero-cta">Explore Our Solutions</a>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <h3>Our Services</h3>
-        <div class="services-container">
-            <div class="service-card">
-                <h4>Digital Solutions</h4>
-                <p>We design custom digital solutions to help organizations streamline operations and improve social impact.</p>
-            </div>
-            <div class="service-card">
-                <h4>Consulting & Insights</h4>
-                <p>Our experts provide actionable insights to solve complex social problems using data-driven approaches.</p>
-            </div>
-            <div class="service-card">
-                <h4>Training & Capacity Building</h4>
-                <p>We empower organizations with knowledge and skills to leverage digital tools effectively.</p>
+<!-- Hero -->
+<section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__grid">
+        <div class="hero__copy">
+            <span class="chip chip--tonal">
+                <span class="material-symbols-rounded" aria-hidden="true">eco</span>
+                Digital solutions for social impact
+            </span>
+            <h1 class="display-large" id="hero-title">
+                Driving <span class="text-accent">social impact</span> through digital solutions
+            </h1>
+            <p class="body-large hero__lead">
+                We equip MSMEs, public institutions and impact organisations with smart digital products
+                and data systems that streamline workflows, sharpen decisions and build a more resilient
+                future.
+            </p>
+            <div class="button-row">
+                <a class="button button--filled button--large" href="{% url 'home.products' %}">
+                    Explore solutions
+                    <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+                </a>
+                <a class="button button--outlined button--large" href="#how-we-work">How we work</a>
             </div>
         </div>
-    </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
-        <h3>What Our Partners Say</h3>
-        <div class="testimonials-container">
-            <div class="testimonial-card">
-                <p>"Grit Insight Hub helped us digitize our processes, saving time and resources. Truly transformative!"</p>
-                <strong>- Bello Omotola, NGO Partner</strong>
+        <!-- Decorative illustration -->
+        <div class="hero__visual" aria-hidden="true">
+            <div class="pipeline-card">
+                <div class="pipeline-card__header">
+                    <span class="pipeline-card__dot"></span>
+                    <span class="title-medium">From data to decisions</span>
+                </div>
+                <ol class="pipeline">
+                    <li class="pipeline__step">
+                        <span class="pipeline__icon"><span class="material-symbols-rounded">database</span></span>
+                        <span><strong class="title-small">Collect</strong><span class="body-small">Field apps, spreadsheets, registries &amp; partner systems</span></span>
+                    </li>
+                    <li class="pipeline__step">
+                        <span class="pipeline__icon"><span class="material-symbols-rounded">tune</span></span>
+                        <span><strong class="title-small">Clean</strong><span class="body-small">Validate, de-duplicate and standardise</span></span>
+                    </li>
+                    <li class="pipeline__step">
+                        <span class="pipeline__icon"><span class="material-symbols-rounded">account_tree</span></span>
+                        <span><strong class="title-small">Connect</strong><span class="body-small">Integrate sources into one trusted model</span></span>
+                    </li>
+                    <li class="pipeline__step pipeline__step--accent">
+                        <span class="pipeline__icon"><span class="material-symbols-rounded">insights</span></span>
+                        <span><strong class="title-small">Act</strong><span class="body-small">Smarter workflows and real-time dashboards</span></span>
+                    </li>
+                </ol>
             </div>
-            <div class="testimonial-card">
-                <p>"Their insights and solutions addressed social challenges in ways we never imagined."</p>
-                <strong>- Adeiza Ja'far, Social Enterprise</strong>
+            <div class="hero__badge">
+                <span class="material-symbols-rounded">eco</span>
+                <span class="label-large">Health &middot; Education &middot; Logistics &middot; AI</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-</main>
+<!-- What we do -->
+<section class="section section--surface" id="services" aria-labelledby="services-title">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <p class="overline">What we do</p>
+            <h2 class="headline-large" id="services-title">Tools to thrive in an increasingly digital world</h2>
+            <p class="body-large">
+                We build digital products and data infrastructure that keep working long after launch,
+                so organisations stay competitive, agile and focused on their impact.
+            </p>
+        </div>
+        <div class="card-grid card-grid--4">
+            <article class="card card--elevated feature" data-reveal>
+                <span class="icon-tile"><span class="material-symbols-rounded" aria-hidden="true">rocket_launch</span></span>
+                <h3 class="title-large">Smarter digital products</h3>
+                <p class="body-medium">Custom web and data products designed around how your team and customers actually work.</p>
+            </article>
+            <article class="card card--elevated feature" data-reveal>
+                <span class="icon-tile icon-tile--tertiary"><span class="material-symbols-rounded" aria-hidden="true">sync_alt</span></span>
+                <h3 class="title-large">Workflow automation</h3>
+                <p class="body-medium">Streamline manual, repetitive processes so people spend their time where it matters.</p>
+            </article>
+            <article class="card card--elevated feature" data-reveal>
+                <span class="icon-tile icon-tile--secondary"><span class="material-symbols-rounded" aria-hidden="true">database</span></span>
+                <h3 class="title-large">Data pipelines &amp; integration</h3>
+                <p class="body-medium">Automated pipelines that collect, clean and connect your data into one trusted source.</p>
+            </article>
+            <article class="card card--elevated feature" data-reveal>
+                <span class="icon-tile"><span class="material-symbols-rounded" aria-hidden="true">monitoring</span></span>
+                <h3 class="title-large">Decision-support dashboards</h3>
+                <p class="body-medium">Real-time insight for planning, resource allocation, monitoring and evaluation.</p>
+            </article>
+        </div>
+        <div class="stack" data-reveal>
+            <p class="label-large stack__label">Built on a modern, proven stack</p>
+            <ul class="chip-set">
+                <li class="chip">Python</li>
+                <li class="chip">SQL</li>
+                <li class="chip">Azure</li>
+                <li class="chip">Databricks</li>
+                <li class="chip">GitHub Actions</li>
+                <li class="chip">Linux</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Who we serve -->
+<section class="section" aria-labelledby="audience-title">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <p class="overline">Who we serve</p>
+            <h2 class="headline-large" id="audience-title">Partners in meaningful change</h2>
+        </div>
+        <div class="card-grid card-grid--3">
+            <article class="card card--tonal audience" data-reveal>
+                <span class="icon-tile icon-tile--on-tonal"><span class="material-symbols-rounded" aria-hidden="true">storefront</span></span>
+                <h3 class="headline-small">MSMEs</h3>
+                <p class="body-large">Digital tools that help micro, small and medium enterprises stay competitive, agile and growing.</p>
+            </article>
+            <article class="card card--tonal-tertiary audience" data-reveal>
+                <span class="icon-tile icon-tile--on-tonal"><span class="material-symbols-rounded" aria-hidden="true">flag</span></span>
+                <h3 class="headline-small">Government &amp; agencies</h3>
+                <p class="body-large">Data systems that help ministries and agencies plan, monitor and deliver public programmes.</p>
+            </article>
+            <article class="card card--tonal-secondary audience" data-reveal>
+                <span class="icon-tile icon-tile--on-tonal"><span class="material-symbols-rounded" aria-hidden="true">handshake</span></span>
+                <h3 class="headline-small">NGOs &amp; social enterprises</h3>
+                <p class="body-large">Infrastructure that helps impact organisations reach communities and prove their results.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Selected work -->
+<section class="section section--surface" aria-labelledby="work-title">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <p class="overline">Selected work</p>
+            <h2 class="headline-large" id="work-title">Real projects, real communities</h2>
+            <p class="body-large">
+                From AI that speaks Nigerian languages to school platforms and port operations, we build
+                technology around the people who use it.
+            </p>
+        </div>
+        <div class="card-grid card-grid--3">
+            <a class="card card--elevated project project--link" href="{% url 'home.projects' %}" data-reveal>
+                <div class="solution__top">
+                    <span class="icon-tile"><span class="material-symbols-rounded" aria-hidden="true">health_and_safety</span></span>
+                    <span class="chip chip--small">Health &middot; AI</span>
+                </div>
+                <h3 class="headline-small">Lafiya AI</h3>
+                <p class="body-medium">A voice-first community health platform in Hausa, Yoruba, Igbo, Pidgin and English, with pregnancy, vaccine and climate-risk alerts.</p>
+            </a>
+            <a class="card card--elevated project project--link" href="{% url 'home.projects' %}" data-reveal>
+                <div class="solution__top">
+                    <span class="icon-tile icon-tile--tertiary"><span class="material-symbols-rounded" aria-hidden="true">code</span></span>
+                    <span class="chip chip--small">Open source</span>
+                </div>
+                <h3 class="headline-small">natlas-health</h3>
+                <p class="body-medium">A developer kit that makes Nigeria's N-ATLaS language model easy to integrate, test, fine-tune and deploy.</p>
+            </a>
+            <a class="card card--elevated project project--link" href="{% url 'home.projects' %}" data-reveal>
+                <div class="solution__top">
+                    <span class="icon-tile icon-tile--secondary"><span class="material-symbols-rounded" aria-hidden="true">school</span></span>
+                    <span class="chip chip--small">Education</span>
+                </div>
+                <h3 class="headline-small">Seedbed</h3>
+                <p class="body-medium">A multi-school portal for low-fee schools: attendance, score sheets, report cards and parent communication, built for Nigeria's school system.</p>
+            </a>
+        </div>
+        <div class="section-footer" data-reveal>
+            <a class="button button--tonal" href="{% url 'home.projects' %}">
+                See all projects
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- How we work -->
+<section class="section" id="how-we-work" aria-labelledby="process-title">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <p class="overline">How we work</p>
+            <h2 class="headline-large" id="process-title">Pilot first, then scale</h2>
+        </div>
+        <ol class="steps">
+            <li class="step" data-reveal>
+                <span class="step__number">1</span>
+                <h3 class="title-large">Discover</h3>
+                <p class="body-medium">We map your goals, the decisions you need to make, the data you already have and the gaps in between.</p>
+            </li>
+            <li class="step" data-reveal>
+                <span class="step__number">2</span>
+                <h3 class="title-large">Pilot</h3>
+                <p class="body-medium">We build and test a working product, pipeline or dashboard with your team.</p>
+            </li>
+            <li class="step" data-reveal>
+                <span class="step__number">3</span>
+                <h3 class="title-large">Deploy</h3>
+                <p class="body-medium">We harden it with automated testing, deployment and documentation, ready for production.</p>
+            </li>
+            <li class="step" data-reveal>
+                <span class="step__number">4</span>
+                <h3 class="title-large">Support &amp; scale</h3>
+                <p class="body-medium">We host, maintain and extend it as you grow, through long-term partnership.</p>
+            </li>
+        </ol>
+    </div>
+</section>
 
 {% endblock content %}

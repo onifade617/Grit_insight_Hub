@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Grit Insight Hub">
+  <g transform="translate(0 4) scale(1.1667)">
+    <rect width="48" height="48" rx="14" fill="#4A2C19"/>
+    <path d="M32.36 14.04A13 13 0 1 0 37 24H25" fill="none" stroke="#E9B949" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M33.2 13.6C33.1 9.3 36.3 6.7 41.2 6.8 41.1 11.3 38.2 13.9 33.2 13.6Z" fill="#8BC79A"/>
+    <path d="M34.6 12.4 39.2 8.4" stroke="#4A2C19" stroke-width="0.9" stroke-linecap="round"/>
+  </g>
+  <text x="70" y="31" font-family="'Roboto Flex', Roboto, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="700" fill="#2B1A0E" letter-spacing="-0.3">Grit Insight Hub</text>
+  <text x="70" y="52" font-family="'Roboto Flex', Roboto, 'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#6F4627" letter-spacing="1.2">DIGITAL SOLUTIONS FOR SOCIAL IMPACT</text>
+</svg>

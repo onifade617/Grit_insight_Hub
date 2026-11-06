@@ -1,34 +1,165 @@
 {% extends 'base.html' %}
 {% block content %}
-{% load static %}
-<main class="products-section">
 
-    <h1 style="text-align:center; color:var(--header-brown); margin-bottom:40px;">
-        Our Products & Projects
-    </h1>
-
-    <div class="products-container">
-        <!-- Example Product Card -->
-        <div class="product-card">
-            <h4>Project Alpha</h4>
-            <p>Digital solution for community engagement and data-driven decision making.</p>
-            <a href="#" class="link">Learn More</a>
-        </div>
-
-        <div class="product-card">
-            <h4>Project Beta</h4>
-            <p>Analytics platform designed to measure social impact efficiently.</p>
-            <a href="#" class="link">Learn More</a>
-        </div>
-
-        <div class="product-card">
-            <h4>Project Gamma</h4>
-            <p>Innovative tool to support NGOs in monitoring and evaluation activities.</p>
-            <a href="#" class="link">Learn More</a>
-        </div>
-
-        <!-- Add more product cards as needed -->
+<!-- Page header -->
+<section class="page-header" aria-labelledby="solutions-title">
+    <div class="container page-header__inner">
+        <p class="overline">Solutions</p>
+        <h1 class="display-medium" id="solutions-title">Digital tools that turn data into impact</h1>
+        <p class="body-large page-header__lead">
+            Every solution is built on reusable, production-grade infrastructure, configured for your
+            organisation, your users and the decisions you need to make.
+        </p>
     </div>
+</section>
 
-</main>
+<!-- MSME solutions -->
+<section class="section section--tight" aria-labelledby="msme-title">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <p class="overline">For MSMEs</p>
+            <h2 class="headline-large" id="msme-title">Stay competitive and agile</h2>
+        </div>
+        <div class="card-grid card-grid--3">
+            <article class="card card--elevated solution" data-reveal>
+                <div class="solution__top">
+                    <span class="icon-tile"><span class="material-symbols-rounded" aria-hidden="true">sync_alt</span></span>
+                    <span class="chip chip--small">Operations</span>
+                </div>
+                <h3 class="headline-small">Workflow digitisation</h3>
+                <p class="body-medium">Replace paper, spreadsheets and repetitive admin with streamlined digital workflows.</p>
+            </article>
+            <article class="card card--elevated solution" data-reveal>
+                <div class="solution__top">
+                    <span class="icon-tile icon-tile--tertiary"><span class="material-symbols-rounded" aria-hidden="true">insights</span></span>
+                    <span class="chip chip--small">Decisions</span>
+                </div>
+                <h3 class="headline-small">Business insight dashboards</h3>
+                <p class="body-medium">See sales, stock, customers and cash flow in one place, so decisions rest on data, not guesswork.</p>
+            </article>
+            <article class="card card--elevated solution" data-reveal>
+                <div class="solution__top">
+                    <span class="icon-tile icon-tile--secondary"><span class="material-symbols-rounded" aria-hidden="true">rocket_launch</span></span>
+                    <span class="chip chip--small">Growth</span>
+                </div>
+                <h3 class="headline-small">Smart digital products</h3>
+                <p class="body-medium">Custom tools and integrations that help you serve customers better and scale with confidence.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Sector solutions -->
+<section class="section section--surface" id="sectors" aria-labelledby="sectors-title">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <p class="overline">For public &amp; social sectors</p>
+            <h2 class="headline-large" id="sectors-title">Systems that help programmes deliver</h2>
+            <p class="body-large">For ministries, agencies, ports, schools, NGOs and social enterprises serving communities across Nigeria.</p>
+        </div>
+        <div class="card-grid card-grid--2">
+            <article class="card card--elevated solution" data-reveal>
+                <div class="solution__top">
+                    <span class="icon-tile"><span class="material-symbols-rounded" aria-hidden="true">health_and_safety</span></span>
+                    <span class="chip chip--small">Health &amp; AI</span>
+                </div>
+                <h3 class="headline-small">Multilingual health assistants</h3>
+                <p class="body-medium">
+                    Voice-first platforms that let people get trusted health guidance in their own language, by
+                    web or WhatsApp, with safety guardrails built in.
+                </p>
+                <ul class="check-list check-list--compact">
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Hausa, Yoruba, Igbo, Pidgin and English</li>
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Pregnancy, vaccine and climate-risk alerts</li>
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Dashboards for health workers and government</li>
+                </ul>
+            </article>
+
+            <article class="card card--elevated solution" data-reveal>
+                <div class="solution__top">
+                    <span class="icon-tile icon-tile--secondary"><span class="material-symbols-rounded" aria-hidden="true">school</span></span>
+                    <span class="chip chip--small">Education</span>
+                </div>
+                <h3 class="headline-small">School management platforms</h3>
+                <p class="body-medium">
+                    Portals that give low-fee schools the tools of the best-equipped ones: records, results,
+                    attendance and communication, built around the Nigerian curriculum.
+                </p>
+                <ul class="check-list check-list--compact">
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Score sheets and terminal report cards</li>
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Logins for staff, students and parents</li>
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Multi-school oversight for state administrators</li>
+                </ul>
+            </article>
+
+            <article class="card card--elevated solution" data-reveal>
+                <div class="solution__top">
+                    <span class="icon-tile icon-tile--tertiary"><span class="material-symbols-rounded" aria-hidden="true">agriculture</span></span>
+                    <span class="chip chip--small">Agri-food</span>
+                </div>
+                <h3 class="headline-small">Agri-food data systems</h3>
+                <p class="body-medium">
+                    Pipelines and dashboards that turn fragmented agricultural data into decisions on food
+                    security, from farmer advisories to post-harvest losses.
+                </p>
+                <ul class="check-list check-list--compact">
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Farmer advisory data pipelines</li>
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Post-harvest loss tracking</li>
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Programme monitoring dashboards</li>
+                </ul>
+            </article>
+
+            <article class="card card--elevated solution" data-reveal>
+                <div class="solution__top">
+                    <span class="icon-tile"><span class="material-symbols-rounded" aria-hidden="true">account_balance</span></span>
+                    <span class="chip chip--small">Logistics &amp; public sector</span>
+                </div>
+                <h3 class="headline-small">Operations decision support</h3>
+                <p class="body-medium">
+                    Forecasting, monitoring and recommendation tools that give ports, agencies and ministries a
+                    live view of operations, with people firmly in control of every decision.
+                </p>
+                <ul class="check-list check-list--compact">
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Congestion and capacity forecasting</li>
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Explainable recommendations with audit trails</li>
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> KPI dashboards, exports and open APIs</li>
+                </ul>
+            </article>
+        </div>
+        <div class="section-footer" data-reveal>
+            <a class="button button--tonal" href="{% url 'home.projects' %}">
+                See these solutions in our projects
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Engagement models -->
+<section class="section" aria-labelledby="engage-title">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <p class="overline">Ways to work with us</p>
+            <h2 class="headline-large" id="engage-title">Start small. Grow with confidence.</h2>
+        </div>
+        <div class="card-grid card-grid--3">
+            <article class="card card--filled feature" data-reveal>
+                <span class="icon-tile"><span class="material-symbols-rounded" aria-hidden="true">description</span></span>
+                <h3 class="title-large">Project build</h3>
+                <p class="body-medium">A defined product, pipeline, dashboard or reporting system, delivered against an agreed scope and timeline.</p>
+            </article>
+            <article class="card card--filled feature" data-reveal>
+                <span class="icon-tile icon-tile--tertiary"><span class="material-symbols-rounded" aria-hidden="true">groups</span></span>
+                <h3 class="title-large">Managed service</h3>
+                <p class="body-medium">We host, update and support what we build, so your team can focus on delivery.</p>
+            </article>
+            <article class="card card--filled feature" data-reveal>
+                <span class="icon-tile icon-tile--secondary"><span class="material-symbols-rounded" aria-hidden="true">handshake</span></span>
+                <h3 class="title-large">Long-term partnership</h3>
+                <p class="body-medium">An ongoing digital partner that grows with your organisation, from first pilot to national scale.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
 {% endblock content %}

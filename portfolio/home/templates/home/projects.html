@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Page header -->
+<section class="page-header" aria-labelledby="projects-title">
+    <div class="container page-header__inner">
+        <p class="overline">Projects</p>
+        <h1 class="display-medium" id="projects-title">Technology put to work for people</h1>
+        <p class="body-large page-header__lead">
+            From AI that speaks Nigerian languages to school platforms and port operations, here is
+            a selection of what we have built, and are building.
+        </p>
+        <ul class="chip-set" aria-label="Sectors">
+            <li class="chip"><span class="material-symbols-rounded" aria-hidden="true">health_and_safety</span>Health</li>
+            <li class="chip"><span class="material-symbols-rounded" aria-hidden="true">smart_toy</span>AI &amp; language</li>
+            <li class="chip"><span class="material-symbols-rounded" aria-hidden="true">school</span>Education</li>
+            <li class="chip"><span class="material-symbols-rounded" aria-hidden="true">directions_boat</span>Logistics</li>
+            <li class="chip"><span class="material-symbols-rounded" aria-hidden="true">account_balance</span>Public sector</li>
+            <li class="chip"><span class="material-symbols-rounded" aria-hidden="true">agriculture</span>Agri-food</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Featured: Lafiya AI -->
+<section class="section section--tight" aria-labelledby="lafiya-title">
+    <div class="container">
+        <article class="case card card--elevated" data-reveal>
+            <div class="case__body">
+                <div class="case__tags">
+                    <span class="chip chip--small chip--tonal">
+                        <span class="material-symbols-rounded" aria-hidden="true">star</span>
+                        Featured
+                    </span>
+                    <span class="chip chip--small">Health</span>
+                    <span class="chip chip--small">AI</span>
+                    <span class="chip chip--small">Django</span>
+                </div>
+                <h2 class="headline-large" id="lafiya-title">Lafiya AI</h2>
+                <p class="title-medium case__subtitle">A multilingual, voice-first community health platform</p>
+                <p class="body-large">
+                    Lafiya helps families, health workers and government partners act on health information in
+                    the language people actually speak. Families can ask questions by web chat or WhatsApp voice
+                    note in Hausa, Yoruba, Igbo, Nigerian Pidgin or English, powered by N-ATLaS, Nigeria's own
+                    large language model.
+                </p>
+                <div class="case__stats">
+                    <div><p class="stat__value">5</p><p class="body-medium">languages, by text and voice</p></div>
+                    <div><p class="stat__value">774</p><p class="body-medium">LGAs mapped for climate &amp; health risk</p></div>
+                    <div><p class="stat__value">86</p><p class="body-medium">automated tests across the platform and SDK</p></div>
+                </div>
+                <a class="button button--outlined" href="https://github.com/onifade617/N-ATLAS-enhanced-apps/blob/HEAD/docs/LAFIYA.md" target="_blank" rel="noopener">
+                    Read the project overview
+                    <span class="material-symbols-rounded" aria-hidden="true">north_east</span>
+                </a>
+            </div>
+            <ul class="case__features">
+                <li>
+                    <span class="icon-tile icon-tile--small"><span class="material-symbols-rounded" aria-hidden="true">record_voice_over</span></span>
+                    <span><strong class="title-small">Care Navigator</strong><span class="body-small">Voice assistant with symptom-to-service referral</span></span>
+                </li>
+                <li>
+                    <span class="icon-tile icon-tile--small icon-tile--tertiary"><span class="material-symbols-rounded" aria-hidden="true">pregnant_woman</span></span>
+                    <span><strong class="title-small">MamaCare</strong><span class="body-small">Pregnancy tracker following the WHO 8-contact antenatal schedule</span></span>
+                </li>
+                <li>
+                    <span class="icon-tile icon-tile--small icon-tile--secondary"><span class="material-symbols-rounded" aria-hidden="true">vaccines</span></span>
+                    <span><strong class="title-small">ImmuniTrack</strong><span class="body-small">Personal vaccine schedules, reminders and zero-dose mapping</span></span>
+                </li>
+                <li>
+                    <span class="icon-tile icon-tile--small"><span class="material-symbols-rounded" aria-hidden="true">thermostat</span></span>
+                    <span><strong class="title-small">ClimateGuard</strong><span class="body-small">Live weather turned into malaria, heat and flood risk alerts</span></span>
+                </li>
+                <li>
+                    <span class="icon-tile icon-tile--small icon-tile--tertiary"><span class="material-symbols-rounded" aria-hidden="true">monitoring</span></span>
+                    <span><strong class="title-small">Government dashboard</strong><span class="body-small">LGA map, coverage gaps, impact metrics and an open API</span></span>
+                </li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+<!-- More projects -->
+<section class="section section--surface" aria-labelledby="more-title">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <p class="overline">More of our work</p>
+            <h2 class="headline-large" id="more-title">Built for real-world impact</h2>
+        </div>
+        <div class="card-grid card-grid--3">
+            <article class="card card--elevated project" data-reveal>
+                <div class="solution__top">
+                    <span class="icon-tile icon-tile--tertiary"><span class="material-symbols-rounded" aria-hidden="true">code</span></span>
+                    <span class="chip chip--small">Open source</span>
+                </div>
+                <h3 class="headline-small">natlas-health</h3>
+                <p class="body-medium">
+                    A Nigerian-maintained developer kit that takes developers from access to N-ATLaS to
+                    integrating, testing, fine-tuning and deploying it, with a safety layer for health answers.
+                </p>
+                <ul class="check-list check-list--compact">
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Python SDK and browser playground</li>
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Fine-tuning and evaluation tools</li>
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Docs in English and Nigerian Pidgin</li>
+                </ul>
+                <a class="button button--text" href="https://github.com/onifade617/N-ATLAS-enhanced-apps" target="_blank" rel="noopener">
+                    View on GitHub
+                    <span class="material-symbols-rounded" aria-hidden="true">north_east</span>
+                </a>
+            </article>
+
+            <article class="card card--elevated project" data-reveal>
+                <div class="solution__top">
+                    <span class="icon-tile icon-tile--secondary"><span class="material-symbols-rounded" aria-hidden="true">school</span></span>
+                    <span class="chip chip--small">Education</span>
+                </div>
+                <h3 class="headline-small">Seedbed</h3>
+                <p class="title-small project__subtitle">The operating system for Africa's low-fee schools</p>
+                <p class="body-medium">
+                    A multi-school, multi-state portal built around Nigeria's 6-3-3-4 system, from
+                    pre-nursery to SSS 3, so low-income schools can run like the best-equipped ones.
+                </p>
+                <ul class="check-list check-list--compact">
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Role-based menus for admins, teachers, students and parents</li>
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> CA and exam score sheets, report cards, WAEC/NECO grading</li>
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Attendance, messaging and safeguarding escalation</li>
+                </ul>
+                <p class="label-large project__note">
+                    <span class="material-symbols-rounded" aria-hidden="true">lock</span>
+                    Private repository &middot; demo on request
+                </p>
+            </article>
+
+            <article class="card card--elevated project" data-reveal>
+                <div class="solution__top">
+                    <span class="icon-tile"><span class="material-symbols-rounded" aria-hidden="true">directions_boat</span></span>
+                    <span class="chip chip--small">Logistics</span>
+                </div>
+                <h3 class="headline-small">Smart-PODSS</h3>
+                <p class="title-small project__subtitle">Smart Port Operations Decision Support System</p>
+                <p class="body-medium">
+                    Turns authorised port data into explainable recommendations that reduce congestion and
+                    truck turnaround times, with a human approving every operational change.
+                </p>
+                <ul class="check-list check-list--compact">
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Transparent congestion forecasts by time window</li>
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Ranked recommendations with rationale and trade-offs</li>
+                    <li><span class="material-symbols-rounded" aria-hidden="true">verified</span> Role-based access, audit trail and KPI tracking</li>
+                </ul>
+                <p class="label-large project__note">
+                    <span class="material-symbols-rounded" aria-hidden="true">lock</span>
+                    Private repository &middot; demo on request
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- What the projects have in common -->
+<section class="section" aria-labelledby="approach-title">
+    <div class="container split">
+        <div data-reveal>
+            <p class="overline">Our approach</p>
+            <h2 class="headline-large" id="approach-title">What every project has in common</h2>
+        </div>
+        <ul class="check-list check-list--spaced" data-reveal>
+            <li><span class="material-symbols-rounded" aria-hidden="true">verified</span>
+                <span><strong>Built for local realities.</strong> Local languages, low-cost devices, WhatsApp and unreliable connectivity are design inputs, not afterthoughts.</span></li>
+            <li><span class="material-symbols-rounded" aria-hidden="true">verified</span>
+                <span><strong>Safe by design.</strong> Guardrails, validation and fallbacks are built in, especially where health or public services are involved.</span></li>
+            <li><span class="material-symbols-rounded" aria-hidden="true">verified</span>
+                <span><strong>Tested and documented.</strong> Automated tests and clear documentation, so systems can be trusted, maintained and handed over.</span></li>
+            <li><span class="material-symbols-rounded" aria-hidden="true">verified</span>
+                <span><strong>Data you can act on.</strong> Dashboards, exports and open APIs that put insight in the hands of decision-makers.</span></li>
+        </ul>
+    </div>
+</section>
+
+{% endblock content %}
